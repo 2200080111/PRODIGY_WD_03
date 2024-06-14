@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       body {
+            background-image: url('D:/tic tac toee/backgrounimage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">
+            <h1 class="title">Tic-Tac-Toe</h1>
+        </div>
+
+        <!-- Step 1: Choose Coin -->
+        <div id="step1" class="box">
+            <p>Choose your coin:</p>
+            <button onclick="chooseCoin('X')">X</button>
+            <button onclick="chooseCoin('O')">O</button>
+        </div>
+
+        <!-- Step 2: Choose Mode -->
+        <div id="step2" class="box" style="display: none;">
+            <p>Choose mode:</p>
+            <button onclick="chooseMode('player')">Player vs Player</button>
+            <button onclick="chooseMode('computer')">Player vs Computer</button>
+        </div>
+
+        <!-- Step 3: Choose Grid Size -->
+        <div id="step3" class="box" style="display: none;">
+            <p>Choose grid size:</p>
+            <button onclick="chooseGridSize(3)">3x3</button>
+            <button onclick="chooseGridSize(4)">4x4</button>
+            <button onclick="chooseGridSize(5)">5x5</button>
+        </div>
+
+        <!-- Game Board -->
+        <div id="gameBoard" class="board box" style="display: none;"></div>
+        <div class="message" id="message" style="display: none;"></div>
+        
+        <!-- Restart and Home Buttons -->
+        <div id="controls" class="box" style="display: none;">
+            <button id="restartButton" onclick="restartGame()">Restart Game</button>
+            <button id="homeButton" onclick="goHome()">Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
